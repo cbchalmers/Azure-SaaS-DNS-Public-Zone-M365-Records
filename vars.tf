@@ -1,24 +1,29 @@
 variable "resource_location" {
-  type    = string
-  default = "UK South"
+  description = "Desired location to provision the resources. Eg UK South"
+  type        = string
+#  default = "UK South"
 }
 
 variable "resource_prefix" {
-  type    = string
-  default = "CC-D-UKS"
+  description = "Desired prefix for the provisioned resources. Eg CC-D-UKS"
+  type        = string
+#  default = "CC-D-UKS"
 }
 
 variable "default_ttl" {
+  description = "Time to Live value"
   type    = string
   default = "3600"
 }
 
 variable "domain_name" {
+  description = "Your public Domain name. Eg contoso.com"
   type    = string
-  default = "your-domain.com"
+#  default = "your-domain.com"
 }
 
 variable "exchange_url" {
-  type    = string
-  default = "yourdomain-com.mail.protection.outlook.com."
+  description = "Your unique MX record. You can find this on [Microsoft 365 Admin Center > Domains](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/Domains)"
+  type        = string
+#  default = "yourdomain-com.mail.protection.outlook.com."
 }
