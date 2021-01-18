@@ -10,7 +10,7 @@ resource "azurerm_dns_txt_record" "dns_txt_record_1" {
 }
 
 resource "azurerm_dns_txt_record" "dns_txt_record_2" {
-  name                = "_dmarc.${var.domain_name}"
+  name                = "_dmarc"
   zone_name           = azurerm_dns_zone.dns_zone.name
   resource_group_name = azurerm_resource_group.resource_group.name
   ttl                 = var.default_ttl
